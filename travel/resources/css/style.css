@@ -1,0 +1,592 @@
+/* ----------------------------------------------------------------------------------*/
+/*  BASIS SETUP */
+/* ----------------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    color: #555;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Lato' ,  'Arial' , sans-serif;
+    text-rendering: optimizeLegibility;
+}
+.clearfix{ zoom: 1}
+.clearfix:after{
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin: 10px 50px 15px 0;
+    font-size: 70%;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 20px;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 6px;
+    text-decoration: none;
+    color: #222;
+    font-weight: 400;
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    color: #ffa800;
+}
+
+.contact-nav{
+    float: right;
+    list-style: none;
+    margin-top: 10px;
+    margin-right: 0;
+}
+.contact-nav li{
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 65%;
+}
+.contact-nav p{
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #555;
+}
+.contact-nav span{
+    color: #ffa800;
+    font-weight: bold;
+    font-size: 80%;
+}
+
+.cus{
+    width: 160px;
+}
+.cus-2{
+    width: 310px;
+}
+.logo{
+    height: 80px;
+    width: auto;
+    margin: 5px 0 5px 50px;
+    float: left;
+}
+
+.nav-icons{
+    float: left;
+    margin: 5px;
+    color: #ffa800;
+    border: 2px solid #ffa800;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    padding: 5px;
+    font-size: 120%;
+    margin-right: 10px;
+}
+
+
+
+.cover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../img/cover.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.view{
+    /* padding-left: 160px; */
+    position: absolute;
+    color: beige;
+    word-spacing: 4px;
+    width: 1140px;
+    top: 88%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+}
+.view h4{
+    font-weight: 400;
+    /* margin-top: 610px; */
+    font-size: 90%;
+    float: left;
+}
+.view-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 60%;
+    margin-left: 10px;
+    background-color: #ffa800;
+    padding: 10px 10px 10px 20px;
+    /* margin-top: 600px; */
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.view-btn:hover{
+    background-color: #ffc400;
+
+}
+
+
+.section-plans{
+    width: 100%;
+    background-color: #000;
+
+}
+.plans-box{
+    top: 93%;
+    left: 8%;
+    /* margin-top: 650px; */
+    margin-right: auto;
+    position: absolute;
+    padding: 0 50px 15px 50px;
+    /* margin-left: 110px; */
+}
+.box{
+    background-color: #fff;
+    box-shadow: 0 2px 2px #d5d5d5;
+
+}
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: black;
+    transition: opacity 0.5s;
+}
+.box img:hover{
+    opacity: 1;
+}
+.box h4{
+    padding: 0 0 5px 15px;
+    font-weight: 400;
+    font-size: 80%;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+.box h5{
+    padding-bottom: 15px;
+    font-weight: 400;
+    float: left;
+    font-size: 70%;
+}
+.price{
+    padding: 0 0 15px 15px;
+}
+.price-item h5{
+    margin-left: 5px;
+    font-weight: bold;
+    color: #00e0f8;
+    font-size: 70%;
+}
+.bg-plans{
+    width: 100%;
+    height: 230px;
+    background-color: #f0f0f0;
+}
+/* Animation
+.js--wp-1{
+    opacity: 0;
+}
+.js--wp-1.animated{
+    opacity: 1;
+} */
+.search-section{
+    margin: 20px auto;
+}
+.logo-search{
+    margin-top: 25px;
+    height: 120px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 50px;
+}
+.btn{
+    background: #fff;
+    outline: none;
+    cursor: pointer;
+    text-align: left;
+}
+.btn h3{
+    margin: 15px 15px 0 15px;
+    color: #333;
+    font-size: 120%;
+    font-weight: 400;
+}
+.btn p{
+    font-size: 60%;
+    margin: 10px 15px;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+.search{
+    margin: 0 50px;
+}
+.search-tour{
+    border-top: 1px #a9a9a9 solid;
+    border-left: 1px #a9a9a9 solid;
+    border-bottom: none;
+    border-right: none;
+}
+.search-hotel{
+    border-bottom: 1px #a9a9a9 solid;
+    border-left: 1px #a9a9a9 solid;
+    border-top: none;
+    border-right: none;
+}
+.search-items{
+    display: block;
+    margin-top: 30px;
+    float: right;
+}
+.search-items li{
+    display: inline-block;
+}
+.search-items input {
+    width: 120px;
+    padding: 8px 15px;
+    font-size: 65%;
+    border: #999 solid 1px;
+    border-radius: 90px;
+    outline: none;
+    margin: auto;
+}
+#location {width: 425px;}
+#price{margin-right: 25px;}
+#length{margin: 0 10px}
+.search-btn{
+    background:#00a1f8;
+    padding: 8px 25px;
+    font-size: 65%;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.search-btn:hover{
+    background:#0070aa;
+}
+.tour-section{
+
+    background-color: #f0f0f0;
+}
+.tour-ss{
+    padding: 20px 50px;
+}
+.tour-item{
+    background-color: #fff;
+    box-shadow: 0 2px 2px #cecece;
+}
+.box-1,
+.box-2,
+.box-3{
+    /* background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ; */
+    background-size: cover;
+    width: auto;
+    position: relative;
+    cursor: pointer;
+}
+/* .box-1:hover,
+.box-2:hover,
+.box-3:hover{
+    box-shadow: 0 2px 2px #a0a0a0;
+} */
+
+.box-1{
+    height: 180px;
+}
+.box-2, .box-3{
+    height: 60px;
+}
+.travel-icon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.tour-name{
+    float: left;
+    bottom: 10px;
+    left: 50px;
+    position: absolute;
+    color: white;
+    margin-left: 5px;
+}
+.tour-name h4{
+    font-size: 70%;
+}
+.tour-name h5{margin-top: 5px;
+    font-size: 65%;
+    font-weight: normal;
+}
+.tour-name i{
+    font-size: 65%;
+    font-weight: 300;
+    cursor: pointer;
+}
+.tour-price{
+    bottom: 5px;
+    position: absolute;
+    font-size: 60%;
+    color: #fff;
+    margin: 10px;
+    right: 10px;
+}
+
+.tour-item h3{
+    margin: 20px;
+    font-size: 100%;
+    letter-spacing: 0.5px;
+    color: #333;
+}
+.tour-item p{
+    margin: 0 0 20px 20px;
+    font-size: 80%;
+    font-weight: 0;
+    color: #666;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.tour-item .other{
+    font-size: 70%;
+    float: right;
+    margin: 10px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.other i{
+    font-size: 120%;
+    margin: 0 3px;
+    color: #00d8f0;
+}
+.support-section{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('../img/water-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 40vh;
+    color: #fff;
+    position: relative;
+}
+.support-section h3{
+    font-size: 120%;
+    font-weight: 300;
+    padding: 30px 0 0 160px;
+}
+.book-bg{
+    margin: 50px 230px;
+    height: 100px;
+    padding: 20px 0;
+    opacity: 0.5;
+    background: #000
+}
+.book-items{
+    text-align: center;
+    margin: 0px 230px;
+    padding: 10px 0;
+    position: absolute;
+    top: 40%;
+}
+.book li{text-align: center;
+    display: inline-block;
+    font-size: 80%;
+    font-weight: 400;
+    margin: 0 50px;
+    opacity: 1;
+}
+.book li a{
+    list-style-type: none;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 20px;
+}
+.book-items li i, .s{
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 1px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    font-weight: bold;
+}
+.activity-section{
+    padding: 30px 150px;
+    background-color: #f0f0f0;
+}
+.activity-section h3{
+    color: #333;
+    margin-top: 5px;
+    font-size: 100%;
+    font-weight: 400;
+    float: left;
+    margin-bottom: 25px
+}
+.act-box{
+    width: 100%;
+    background: #333;
+}
+.act-img{
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+.act-img img{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.4));
+    transform: scale(1.15); /*zoom*/
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.7;
+}
+.act-img img:hover{
+    transform: scale(1.03);
+    opacity: 1;
+}
+.act-name{
+    position: absolute;
+    bottom: 15px;
+    margin-left: 10px;
+    font-size: 90%;
+    color: #fff;
+    font-weight: 400
+}
+.act-info, .act-date{
+    color: #fff;
+    font-size: 65%;
+    font-weight: 300;
+    margin: 10px;
+}
+.act-info{
+    float: left;}
+.act-date{
+    float: right;
+}
+
+/* FOOTER */
+footer{
+    padding: 20px 150px;
+}
+.logo-footer{
+    float: left;
+    margin: 20px 50px 20px 0;
+    width: 200px;
+    height: auto;
+}
+.infomation{
+    float: left;
+    margin-right: 60px
+}
+.infomation h3{
+    margin: 10px 0 5px 0;
+    font-size: 90%;
+    font-weight: 400;
+}
+.infomation li{list-style-type: none;}
+.infomation li a{
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 65%;
+    font-weight: 400;
+    color: #333;
+}
+.social{
+    float: left;
+}
+.social h3{
+    margin: 10px 0 5px 0;
+    font-size: 90%;
+    font-weight: 400;
+}
+.social li{
+    list-style-type: none;
+    margin: 7px 0;
+}
+.social li a{
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 65%;
+    font-weight: 400;
+    color: #333;
+    margin: 20px 0;
+}
+.social i{margin-right: 7px}
+.social .fb:hover{color: #016496}
+.social .gg:hover{color: #c30000}
+.social .tw:hover{color: #0070aa}
+.social .ytb:hover{color: red}
+.mail-box{
+    float: right;
+    margin-top: 25px;
+}
+.mail-box h5{
+    font-size: 65%;
+    font-weight: 400;
+    color: #333;
+    margin: 20px 0;
+}
+.mail-box input{
+    height: 50px;
+    width: 360px;
+    color: #999;
+    font-size: 70%;
+    font-style: italic;
+    padding-left: 10px;
+    margin: 0;
+    outline: none;
+    border: 1px solid #999;
+    border-right: none;
+}
+.mail-ip{float: left;}
+.btn-email{
+    padding: 10px 30px;
+    height: 50px;
+    background: #00e0f8;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    float: right;
+}
+.btn-email i{
+    font-size: 130%;
+    color: #fff;
+    text-align: center;
+}
+
+.final h5{
+    font-weight: 400;
+    font-size: 65%;
+    color: #333;
+    margin: 10px 0;
+}
+.copy{float: left;}
+
+.design{
+    float: right;
+}
+.design span{
+    color: #02a002;
+    font-weight: bold
+}
